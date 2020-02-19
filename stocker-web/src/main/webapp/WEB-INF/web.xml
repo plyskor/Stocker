@@ -4,4 +4,26 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>WEB-INF/beans.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.preciapps.stocker.web.context.StockerServletContextListener</listener-class>
+	</listener>
+  <servlet>
+  	<servlet-name>NewBatteryAction</servlet-name>
+  	<display-name>NewBatteryAction</display-name>
+  	<description>Creates a new battery in Database</description>
+  	<servlet-class>com.preciapps.stocker.web.servlet.NewBatteryAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewBatteryAction</servlet-name>
+  	<url-pattern>/NewBatteryAction</url-pattern>
+  </servlet-mapping>
 </web-app>
