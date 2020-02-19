@@ -3,7 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Stocker Web Application</display-name>
   	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>WEB-INF/beans.xml</param-value>
@@ -18,12 +18,13 @@
 	</listener>
   <servlet>
   	<servlet-name>NewBatteryAction</servlet-name>
-  	<display-name>NewBatteryAction</display-name>
+  	<display-name>New Battery</display-name>
   	<description>Creates a new battery in Database</description>
   	<servlet-class>com.preciapps.stocker.web.servlet.NewBatteryAction</servlet-class>
   </servlet>
+
   <servlet-mapping>
   	<servlet-name>NewBatteryAction</servlet-name>
-  	<url-pattern>/NewBatteryAction</url-pattern>
+  	<url-pattern>/newBattery</url-pattern>
   </servlet-mapping>
 </web-app>
