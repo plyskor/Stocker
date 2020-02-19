@@ -17,6 +17,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.preciapps.stocker.model.Battery;
+import com.preciapps.stocker.model.StandardBattery;
 
 /**
  * @author joseantoniogarciadelsaz
@@ -25,10 +26,8 @@ import com.preciapps.stocker.model.Battery;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScans(value = { @ComponentScan("es.uam.eps.tweetextractor.dao"),
-		@ComponentScan("es.uam.eps.tweetextractor.dao.service"),
-		@ComponentScan("es.uam.eps.tweetextractor.analytics.dao"),
-		@ComponentScan("es.uam.eps.tweetextractor.analytics.dao.service") })
+@ComponentScans(value = { @ComponentScan("com.preciapps.stocker.dao"),
+		@ComponentScan("com.preciapps.stocker.dao.service") })
 public class StockerSpringConfigurator {
 
 	@Bean
@@ -53,7 +52,7 @@ public class StockerSpringConfigurator {
 		props.put("hibernate.c3p0.timeout", "20000");
 		props.put("hibernate.hbm2ddl.auto", "update");
 		factoryBean.setHibernateProperties(props);
-		factoryBean.setAnnotatedClasses(Battery.class);
+		factoryBean.setAnnotatedClasses(Battery.class,StandardBattery.class);
 		return factoryBean;
 	}
 

@@ -56,6 +56,20 @@ public abstract class Battery implements Serializable {
 	@Column(name="serial",length=13)
 	protected String serial="";
 	
+	public Battery(BatteryTypes batteryType, String capacity, String resistance, String leakage, String ocv,
+			String brand, String structure, String message, String stage, String serial) {
+		super();
+		this.batteryType = batteryType;
+		this.capacity = capacity;
+		this.resistance = resistance;
+		this.leakage = leakage;
+		this.ocv = ocv;
+		this.brand = brand;
+		this.structure = structure;
+		this.message = message;
+		this.stage = stage;
+		this.serial = serial;
+	}
 	public int getIdentifier() {
 		return identifier;
 	}

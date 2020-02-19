@@ -59,7 +59,7 @@
 				</div>
 				<div class="wrap-input100 bg1 rs1-wrap-input100" >
 					<span class="label-input100">Resistencia</span>
-					<input class="input100" type="text" name="capacity" placeholder="Introduzca la resistencia">
+					<input class="input100" type="text" name="resistance" placeholder="Introduzca la resistencia">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">

@@ -36,7 +36,7 @@ public class StockerServletContextListener implements ServletContextListener{
 		  AnnotationConfigApplicationContext StockerServerSpringContext = 
 	                new AnnotationConfigApplicationContext(StockerSpringConfigurator.class);
 		  ServletContext context = arg0.getServletContext();
-		  
+		  context.setAttribute("springContext", StockerServerSpringContext);
 		  
 	  }
 }
