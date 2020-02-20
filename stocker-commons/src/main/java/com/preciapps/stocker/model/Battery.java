@@ -70,6 +70,9 @@ public abstract class Battery implements Serializable {
 		this.stage = stage;
 		this.serial = serial;
 	}
+	public Battery() {
+		super();
+	}
 	public int getIdentifier() {
 		return identifier;
 	}

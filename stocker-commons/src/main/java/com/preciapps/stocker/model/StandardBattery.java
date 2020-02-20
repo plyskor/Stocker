@@ -21,7 +21,9 @@ public class StandardBattery extends Battery {
 			String brand, String structure, String message, String stage, String serial) {
 		super(BatteryTypes.STAND, capacity, resistance, leakage, ocv, brand, structure, message, stage, serial);
 	}
-
+	public StandardBattery() {
+		super();
+	}
 	/**
 	 * 
 	 */
